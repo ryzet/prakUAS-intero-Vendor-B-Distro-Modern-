@@ -2,10 +2,10 @@
 function normalizeVendorB(data) {
   return data.map(item => {
     return {
-      kode_produk: item.sku,
-      nama_produk: item.productName,
-      harga: item.price,
-      status: item.isAvailable ? "tersedia" : "habis"
+      kode_product: item.sku,
+      name_produk: item.productName,
+      price: item.price,
+      status: item.isAvailable ? "available" : "sold out"
     };
   });
 }
