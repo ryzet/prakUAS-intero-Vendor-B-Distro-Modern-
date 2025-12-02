@@ -1,14 +1,32 @@
 [
   {
     "sku": "TSHIRT-001",
-    "productName": "Kaos Ijen Crater",
+    "productName": "Ijen Crater T-Shirt",
     "price": 75000,
     "isAvailable": true
   },
   {
-    "sku": "TSHIRT-002",
-    "productName": "Kaos Banyuwangi Festival",
-    "price": 85000,
+    "sku": "MUG-001",
+    "productName": "Banyuwangi Traditional Mug",
+    "price": 45000,
+    "isAvailable": false
+  },
+  {
+    "sku": "CAP-002",
+    "productName": "Blambangan Heritage Cap",
+    "price": 55000,
+    "isAvailable": true
+  },
+  {
+    "sku": "BAG-001",
+    "productName": "Eco Friendly Tote Bag",
+    "price": 65000,
+    "isAvailable": true
+  },
+  {
+    "sku": "POSTER-001",
+    "productName": "Banyuwangi Landscape Poster",
+    "price": 30000,
     "isAvailable": false
   }
 ]
