@@ -2,8 +2,8 @@
 function normalizeVendorB(data) {
   return data.map(item => {
     return {
-      kode_product: item.sku,
-      name_produk: item.productName,
+      product_code: item.sku,
+      product_name: item.productName,
       price: item.price,
       status: item.isAvailable ? "available" : "sold out"
     };
