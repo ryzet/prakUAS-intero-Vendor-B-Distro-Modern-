@@ -1,5 +1,7 @@
 const express = require("express");
 const cors = require("cors");
+const fs = require("fs");
+const path = require("path");
 const normalizeVendorB = require("./vendorB");
 const vendorBData = require("./data/vendorB.json");
 
@@ -8,19 +10,22 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("vendorB/data atau vendor-b/normalize");
+  res.send("vendorB/data");
 });
 
 app.get("/vendorB/data", (req, res) => {
-  res.json(vendorBData);
-});
+  try {
+    const filePath = path.join(__dirname, "data", "vendorB.json");
+    const fileContent = fs.readFileSync(filePath, "utf-8");
+    const jsonData = JSON.parse(fileContent);
 
-app.get("/vendor-b/normalize", (req, res) => {
-  const normalized = normalizeVendorB(vendorBData);
-  res.json({
-    vendor: "Vendor B — Distro Modern",
-    normalizedData: normalized
-  });
+    res.json(jsonData);
+  } catch (error) {
+    res.status(500).json({
+      message: "Failed to read JSON file",
+      error: error.message
+    });
+  }
 });
 
 app.listen(3000, () => {

@@ -28,5 +28,11 @@
     "productName": "Banyuwangi Landscape Poster",
     "price": 30000,
     "isAvailable": false
+  },
+  {
+    "sku": "TSHIRT-006",
+    "productName": "jeans",
+    "price": 75000,
+    "isAvailable": true
   }
 ]
